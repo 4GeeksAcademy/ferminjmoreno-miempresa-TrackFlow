@@ -1,4 +1,4 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&o(r)}).observe(document,{childList:!0,subtree:!0});function i(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerPolicy&&(a.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?a.credentials="include":e.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function o(e){if(e.ep)return;e.ep=!0;const a=i(e);fetch(e.href,a)}})();const f=()=>`
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&s(i)}).observe(document,{childList:!0,subtree:!0});function r(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerPolicy&&(a.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?a.credentials="include":e.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function s(e){if(e.ep)return;e.ep=!0;const a=r(e);fetch(e.href,a)}})();const C=()=>`
   <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-3 focus:bg-secondary-emerald focus:text-white focus:rounded-lg focus:font-semibold">
     Saltar al contenido principal
   </a>
@@ -48,7 +48,7 @@
       </div>
     </nav>
   </header>
-`,h=()=>`
+`,F=()=>`
   <section class="relative overflow-hidden py-20 lg:py-28 text-white bg-primary-navy">
     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,#3b82f6,transparent_35%),radial-gradient(circle_at_80%_80%,#10b981,transparent_35%)]" aria-hidden="true"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -61,20 +61,29 @@
           <a href="#services" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold rounded-lg border border-slate-600 text-slate-200 hover:text-white hover:border-slate-400 transition-smooth">Conocer servicios</a>
         </div>
       </div>
-      <aside class="lg:col-span-5 rounded-2xl p-6 bg-slate-900/80 border border-slate-800 shadow-2xl">
-        <p class="text-xs font-mono text-slate-400 mb-4">TRACKING SERVICE: ACTIVE</p>
+      <aside class="hero-right-panel lg:col-span-5 rounded-2xl p-6 bg-slate-900/80 border border-slate-800 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-xs font-mono text-slate-400">TRACKING SERVICE: ACTIVE</p>
+          <span class="h-2.5 w-2.5 rounded-full bg-emerald-400" aria-hidden="true"></span>
+        </div>
         <div class="space-y-3">
-          <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-            <div>
-              <h3 class="text-sm font-semibold">Centro Los Angeles <span class="text-emerald-400 font-mono">(LAX)</span></h3>
-              <p class="text-xs text-slate-400">Cobertura nacional USA</p>
+          <div class="hero-right-card p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-emerald-300 font-mono text-xs px-2 py-1 rounded bg-emerald-300/10">LAX</span>
+              <div>
+                <h3 class="text-sm font-semibold">Centro Los Angeles</h3>
+                <p class="text-xs text-slate-400">Cobertura nacional USA</p>
+              </div>
             </div>
             <span class="text-emerald-400 font-mono text-xs">99.8%</span>
           </div>
-          <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-            <div>
-              <h3 class="text-sm font-semibold">Centro Zaragoza <span class="text-blue-400 font-mono">(ZAZ)</span></h3>
-              <p class="text-xs text-slate-400">Cobertura Europa</p>
+          <div class="hero-right-card p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-blue-300 font-mono text-xs px-2 py-1 rounded bg-blue-300/10">ZAZ</span>
+              <div>
+                <h3 class="text-sm font-semibold">Centro Zaragoza</h3>
+                <p class="text-xs text-slate-400">Cobertura Europa</p>
+              </div>
             </div>
             <span class="text-blue-400 font-mono text-xs">99.9%</span>
           </div>
@@ -82,7 +91,7 @@
       </aside>
     </div>
   </section>
-`,y=[{title:"Gestion de almacenes",body:"Almacenamiento, picking y packing con inventario en tiempo real desde hubs en Los Angeles y Zaragoza.",tag:"Moda, electronica y cosmetica"},{title:"Entregas de ultima milla",body:"Integracion con carriers certificados y seguimiento unificado para reducir incidencias de transporte.",tag:"Carriers auditados"},{title:"Logistica inversa",body:"Devoluciones automatizadas, inspeccion, reacondicionamiento y reingreso a stock con API directa.",tag:"Operacion automatizada"}],w=()=>`
+`,j=[{title:"Gestion de almacenes",body:"Almacenamiento, picking y packing con inventario en tiempo real desde hubs en Los Angeles y Zaragoza.",tag:"Moda, electronica y cosmetica",image:"/src/assets/cards/warehouse.svg",alt:"Gestion de almacenes"},{title:"Entregas de ultima milla",body:"Integracion con carriers certificados y seguimiento unificado para reducir incidencias de transporte.",tag:"Carriers auditados",image:"/src/assets/cards/last-mile.svg",alt:"Entregas de ultima milla"},{title:"Logistica inversa",body:"Devoluciones automatizadas, inspeccion, reacondicionamiento y reingreso a stock con API directa.",tag:"Operacion automatizada",image:"/src/assets/cards/returns.svg",alt:"Logistica inversa"}],I=()=>`
   <section id="services" class="py-20 lg:py-28 bg-white" aria-labelledby="services-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -90,8 +99,9 @@
         <p class="text-base sm:text-lg text-neutral-text">Soluciones modulares para acelerar operaciones de e-commerce en dos continentes.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        ${y.map(t=>`
+        ${j.map(t=>`
           <article class="bg-neutral-bg p-8 rounded-2xl border border-slate-200/80 card-shadow card-shadow-hover flex flex-col justify-between gap-4">
+            <img src="${t.image}" alt="${t.alt}" class="w-12 h-12 object-contain" loading="lazy" />
             <h3 class="text-xl font-bold text-neutral-title">${t.title}</h3>
             <p class="text-sm leading-relaxed text-neutral-text">${t.body}</p>
             <span class="text-xs font-semibold text-accent-blue uppercase tracking-wider">${t.tag}</span>
@@ -100,7 +110,7 @@
       </div>
     </div>
   </section>
-`,k=()=>`
+`,_=()=>`
   <section id="coverage" class="py-20 lg:py-28 bg-neutral-bg border-t border-slate-200" aria-labelledby="coverage-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -109,17 +119,33 @@
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <article class="bg-white p-8 rounded-2xl border border-slate-200/80 card-shadow space-y-4">
-          <h3 class="text-2xl font-bold text-neutral-title">Estados Unidos (LAX)</h3>
+          <h3 class="text-2xl font-bold text-neutral-title">Estados Unidos (US)</h3>
           <p class="text-sm text-neutral-text">Hub de Los Angeles con cobertura costa a costa y acuerdos premium con UPS, FedEx y DHL.</p>
+          <div class="pt-3 border-t border-slate-100">
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Carriers de ultima milla:</h4>
+            <ul class="grid grid-cols-3 gap-2 text-xs font-semibold text-neutral-title text-center">
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">UPS</li>
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">FedEx</li>
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">DHL</li>
+            </ul>
+          </div>
         </article>
         <article class="bg-white p-8 rounded-2xl border border-slate-200/80 card-shadow space-y-4">
-          <h3 class="text-2xl font-bold text-neutral-title">Espana (ZAZ)</h3>
+          <h3 class="text-2xl font-bold text-neutral-title">España (ES)</h3>
           <p class="text-sm text-neutral-text">Hub de Zaragoza para envios peninsulares e insulares con MRW, SEUR y DHL.</p>
+          <div class="pt-3 border-t border-slate-100">
+            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Carriers de ultima milla:</h4>
+            <ul class="grid grid-cols-3 gap-2 text-xs font-semibold text-neutral-title text-center">
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">MRW</li>
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">SEUR</li>
+              <li class="bg-slate-50 p-2 rounded-lg border border-slate-100">DHL</li>
+            </ul>
+          </div>
         </article>
       </div>
     </div>
   </section>
-`,S=[{title:"Operacion binacional",text:"Equipos propios y procesos estandarizados en USA y Espana."},{title:"Equipo experto",text:"Especialistas en fulfillment, transporte y mejora continua."},{title:"Tecnologia propia",text:"Panel unico para inventario, pedidos y estados de entrega."},{title:"Verticales focus",text:"Experiencia real en moda, tecnologia y cosmetica."}],L=()=>`
+`,M=[{title:"Operacion binacional",text:"Equipos propios y procesos estandarizados en USA y Espana."},{title:"Equipo experto",text:"Especialistas en fulfillment, transporte y mejora continua."},{title:"Tecnologia propia",text:"Panel unico para inventario, pedidos y estados de entrega."},{title:"Verticales focus",text:"Experiencia real en moda, tecnologia y cosmetica."}],$=()=>`
   <section id="why-us" class="py-20 lg:py-28 bg-white" aria-labelledby="why-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -127,7 +153,7 @@
         <p class="text-base sm:text-lg text-neutral-text">Marcas internacionales confian en un modelo operativo medible y escalable.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        ${S.map(t=>`
+        ${M.map(t=>`
           <article class="space-y-2">
             <h3 class="text-lg font-bold text-neutral-title">${t.title}</h3>
             <p class="text-sm text-neutral-text leading-relaxed">${t.text}</p>
@@ -136,7 +162,7 @@
       </div>
     </div>
   </section>
-`,A=()=>`
+`,z=()=>`
   <section id="contact" class="py-20 lg:py-28 bg-neutral-bg border-t border-slate-200" aria-labelledby="contact-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -159,9 +185,51 @@
             </div>
 
             <div>
-              <label for="contact-email" class="form-label">Email corporativo *</label>
-              <input id="contact-email" name="contact_email" type="email" class="form-input" required />
-              <p id="contact-email-error" class="form-error hidden">Ingresa un email corporativo valido.</p>
+              <label for="contact-person" class="form-label">Persona de contacto *</label>
+              <input id="contact-person" name="contact_person" type="text" class="form-input" required />
+              <p id="contact-person-error" class="form-error hidden">Ingresa el nombre de contacto.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-email" class="form-label">Email corporativo *</label>
+                <input id="contact-email" name="contact_email" type="email" class="form-input" required />
+                <p id="contact-email-error" class="form-error hidden">Ingresa un email corporativo valido.</p>
+              </div>
+              <div>
+                <label for="contact-phone" class="form-label">Telefono de contacto *</label>
+                <input id="contact-phone" name="contact_phone" type="tel" class="form-input" required />
+                <p id="contact-phone-error" class="form-error hidden">Ingresa un telefono valido.</p>
+              </div>
+            </div>
+
+            <div>
+              <label for="company-website" class="form-label">Sitio web de la empresa</label>
+              <input id="company-website" name="company_website" type="url" class="form-input" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="company-country" class="form-label">Pais de operacion principal *</label>
+                <select id="company-country" name="company_country" class="form-input" required>
+                  <option value="" selected disabled>Selecciona un pais</option>
+                  <option value="US">Estados Unidos</option>
+                  <option value="ES">España</option>
+                  <option value="BOTH">Ambos</option>
+                </select>
+                <p id="company-country-error" class="form-error hidden">Selecciona un pais.</p>
+              </div>
+              <div>
+                <label for="product-type" class="form-label">Tipo de producto *</label>
+                <select id="product-type" name="product_type" class="form-input" required>
+                  <option value="" selected disabled>Selecciona tipo de producto</option>
+                  <option value="moda">Moda</option>
+                  <option value="electronica">Electronica</option>
+                  <option value="cosmetica">Cosmetica</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <p id="product-type-error" class="form-error hidden">Selecciona un tipo de producto.</p>
+              </div>
             </div>
 
             <div>
@@ -187,6 +255,16 @@
               <p id="services-error" class="form-error hidden">Selecciona al menos un servicio.</p>
             </fieldset>
 
+            <fieldset>
+              <legend class="form-label">Actualmente trabajas con otro 3PL? *</legend>
+              <div class="flex flex-wrap gap-4 mt-2 text-sm">
+                <label class="inline-flex items-center gap-2"><input type="radio" name="current_3pl" value="si">Si</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="current_3pl" value="no">No</label>
+                <label class="inline-flex items-center gap-2"><input type="radio" name="current_3pl" value="evaluando">Estoy evaluando</label>
+              </div>
+              <p id="current-3pl-error" class="form-error hidden">Selecciona una opcion.</p>
+            </fieldset>
+
             <div>
               <div class="flex justify-between items-center mb-1">
                 <label for="additional-comments" class="form-label m-0">Comentarios</label>
@@ -208,7 +286,7 @@
       </div>
     </div>
   </section>
-`,E=()=>`
+`,B=()=>`
   <footer class="bg-primary-navy text-slate-400 py-10 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
       <div class="flex items-center gap-2" aria-hidden="true">
@@ -229,14 +307,14 @@
       </nav>
     </div>
   </footer>
-`,q=()=>`
-  ${f()}
+`,T=()=>`
+  ${C()}
   <main id="main-content" tabindex="-1" class="focus:outline-none">
-    ${h()}
-    ${w()}
-    ${k()}
-    ${L()}
-    ${A()}
+    ${F()}
+    ${I()}
+    ${_()}
+    ${$()}
+    ${z()}
   </main>
-  ${E()}
-`,F=()=>{const t=document.querySelector("#hamburger-btn"),s=document.querySelector("#mobile-menu"),i=document.querySelector("#hamburger-icon"),o=document.querySelector("#close-icon");!t||!s||!i||!o||(t.addEventListener("click",()=>{const e=t.getAttribute("aria-expanded")==="true";t.setAttribute("aria-expanded",String(!e)),s.classList.toggle("hidden",e),i.classList.toggle("hidden",!e),o.classList.toggle("hidden",e)}),s.querySelectorAll("a").forEach(e=>{e.addEventListener("click",()=>{t.setAttribute("aria-expanded","false"),s.classList.add("hidden"),i.classList.remove("hidden"),o.classList.add("hidden")})}))},l=(t,s)=>{const i=document.querySelector(`#${t}`);i&&i.classList.toggle("hidden",!s)},C=()=>{const t=document.querySelector("#lead-form");if(!t)return;const s=document.querySelector("#additional-comments"),i=document.querySelector("#char-counter"),o=document.querySelector("#monthly-volume"),e=document.querySelector("#volume-warning"),a=document.querySelector("#form-status");s==null||s.addEventListener("input",()=>{const r=500-s.value.length;i&&(i.textContent=`Quedan ${r} caracteres`)}),o==null||o.addEventListener("change",()=>{e==null||e.classList.toggle("hidden",o.value!=="0-100")}),t.addEventListener("submit",r=>{r.preventDefault();const n=document.querySelector("#company-name"),c=document.querySelector("#contact-email"),d=document.querySelector("#privacy-agreement"),b=t.querySelectorAll('input[name="services"]:checked'),m=!(n!=null&&n.value)||n.value.trim().length<2,p=!(c!=null&&c.value)||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.value),u=!(o!=null&&o.value),x=b.length===0,g=!(d!=null&&d.checked);if(l("company-name-error",m),l("contact-email-error",p),l("monthly-volume-error",u),l("services-error",x),l("privacy-agreement-error",g),m||p||u||x||g){a&&(a.textContent="Revisa los campos marcados para continuar.");return}a&&(a.textContent="Solicitud enviada. Te contactaremos pronto."),t.reset(),i&&(i.textContent="Quedan 500 caracteres"),e==null||e.classList.add("hidden")})},v=document.querySelector("#app");if(!v)throw new Error("No se encontro el contenedor #app");v.innerHTML=q();F();C();
+  ${B()}
+`,P=()=>{const t=document.querySelector("#hamburger-btn"),o=document.querySelector("#mobile-menu"),r=document.querySelector("#hamburger-icon"),s=document.querySelector("#close-icon");!t||!o||!r||!s||(t.addEventListener("click",()=>{const e=t.getAttribute("aria-expanded")==="true";t.setAttribute("aria-expanded",String(!e)),o.classList.toggle("hidden",e),r.classList.toggle("hidden",!e),s.classList.toggle("hidden",e)}),o.querySelectorAll("a").forEach(e=>{e.addEventListener("click",()=>{t.setAttribute("aria-expanded","false"),o.classList.add("hidden"),r.classList.remove("hidden"),s.classList.add("hidden")})}))},l=(t,o)=>{const r=document.querySelector(`#${t}`);r&&r.classList.toggle("hidden",!o)},U=()=>{const t=document.querySelector("#lead-form");if(!t)return;const o=document.querySelector("#additional-comments"),r=document.querySelector("#char-counter"),s=document.querySelector("#monthly-volume"),e=document.querySelector("#volume-warning"),a=document.querySelector("#form-status");o==null||o.addEventListener("input",()=>{const i=500-o.value.length;r&&(r.textContent=`Quedan ${i} caracteres`)}),s==null||s.addEventListener("change",()=>{e==null||e.classList.toggle("hidden",s.value!=="0-100")}),t.addEventListener("submit",i=>{i.preventDefault();const n=document.querySelector("#company-name"),c=document.querySelector("#contact-person"),d=document.querySelector("#contact-email"),p=document.querySelector("#contact-phone"),m=document.querySelector("#company-country"),u=document.querySelector("#product-type"),x=document.querySelector("#privacy-agreement"),q=t.querySelectorAll('input[name="current_3pl"]:checked'),A=t.querySelectorAll('input[name="services"]:checked'),g=!(n!=null&&n.value)||n.value.trim().length<2,b=!(c!=null&&c.value)||c.value.trim().length<2,v=!(d!=null&&d.value)||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.value),f=!(p!=null&&p.value)||p.value.trim().length<7,h=!(m!=null&&m.value),y=!(u!=null&&u.value),w=!(s!=null&&s.value),k=A.length===0,S=q.length===0,L=!(x!=null&&x.checked);if(l("company-name-error",g),l("contact-person-error",b),l("contact-email-error",v),l("contact-phone-error",f),l("company-country-error",h),l("product-type-error",y),l("monthly-volume-error",w),l("services-error",k),l("current-3pl-error",S),l("privacy-agreement-error",L),g||b||v||f||h||y||w||k||S||L){a&&(a.textContent="Revisa los campos marcados para continuar.");return}a&&(a.textContent="Solicitud enviada. Te contactaremos pronto."),t.reset(),r&&(r.textContent="Quedan 500 caracteres"),e==null||e.classList.add("hidden")})},E=document.querySelector("#app");if(!E)throw new Error("No se encontro el contenedor #app");E.innerHTML=T();P();U();
